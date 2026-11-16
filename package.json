@@ -1,0 +1,47 @@
+{
+  "name": "rehoboam",
+  "version": "0.1.0",
+  "description": "A monochrome corona plot: groups of anomaly classes laid out around a ring, with flares scaled by strength.",
+  "license": "MIT",
+  "author": "Daniel Mouritsen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justdanyul/rehoboam.git"
+  },
+  "homepage": "https://github.com/justdanyul/rehoboam#readme",
+  "keywords": ["react", "visualization", "anomaly", "corona", "canvas"],
+  "type": "module",
+  "main": "./dist/rehoboam.cjs",
+  "module": "./dist/rehoboam.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/rehoboam.js",
+      "require": "./dist/rehoboam.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}
